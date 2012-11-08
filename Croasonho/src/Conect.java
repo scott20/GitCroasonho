@@ -5,10 +5,9 @@ public class Conect
     public static void main (String[] args)
     {
         Connection conecsao = null;
-
         try
         {
-            String userName = "root";
+            String userName ="root";
             String password = "123456";
             String url = "jdbc:mysql://127.0.0.1/croasonho";
             Class.forName ("com.mysql.jdbc.Driver").newInstance ();
