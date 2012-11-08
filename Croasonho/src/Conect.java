@@ -4,7 +4,7 @@ public class Conect
 {
     public static void main (String[] args)
     {
-        Connection conn = null;
+        Connection conecsao = null;
 
         try
         {
@@ -12,7 +12,7 @@ public class Conect
             String password = "123456";
             String url = "jdbc:mysql://127.0.0.1/croasonho";
             Class.forName ("com.mysql.jdbc.Driver").newInstance ();
-            conn = DriverManager.getConnection (url, userName, password);
+            conecsao = DriverManager.getConnection (url, userName, password);
             System.out.println ("Conexão com o BD estabelecida!");
         }
         catch (Exception e)
@@ -21,11 +21,11 @@ public class Conect
         }
         finally
         {
-            if (conn != null)
+            if (conecsao != null)
             {
                 try
                 {
-                    conn.close ();
+                    conecsao.close ();
                     System.out.println ("Conexão finalizada");
                 }
                 catch (Exception e) { /* ignore close errors */ }
